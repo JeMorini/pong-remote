@@ -23,31 +23,34 @@ io.on("connection", (socket) => {
   //       console.log(err, "ERRO");
   //     }
   //   });
-  socket.on("movimentUpArrowUpP1", (a) => {
-    console.log(a);
+  socket.on("movimentUpArrowUpP1", async (a) => {
     socket.emit("returnMovimentUpArrowUpP1", "voltou");
+    io.emit("returnMovimentUpArrowUpP1", "voltou");
   });
 
-  socket.on("movimentDownArrowUpP1", (a) => {
+  socket.on("movimentDownArrowUpP1", async (a) => {
     console.log(a);
     socket.emit("returnMovimentDownArrowUpP1", "voltou");
+    io.emit("returnMovimentDownArrowUpP1", "voltou");
   });
 
-  socket.on("movimentUpArrowDownP1", (a) => {
+  socket.on("movimentUpArrowDownP1", async (a) => {
     console.log(a);
     socket.emit("returnMovimentUpArrowDownP1", "voltou");
+    io.emit("returnMovimentUpArrowDownP1", "voltou");
   });
 
-  socket.on("movimentDownArrowDownP1", (a) => {
+  socket.on("movimentDownArrowDownP1", async (a) => {
     console.log(a);
     socket.emit("returnMovimentDownArrowDownP1", "voltou");
+    io.emit("returnMovimentDownArrowDownP1", "voltou");
   });
-  socket.on("start", (a) => {
-    console.log(a);
+  socket.on("start", async (a) => {
     socket.emit("returnStart", "voltou");
+    io.emit("returnStart", "voltou");
   });
 
-  socket.on("disconnect", () => {
+  socket.on("disconnect", async () => {
     console.log("[SOCKET] Disconnect => A connection was disconnected");
   });
 });

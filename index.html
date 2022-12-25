@@ -143,34 +143,40 @@
       try {
         var socket = io("http://localhost:8080", { transports: ["websocket"] });
 
+        socket.on("connect", function () {
+          // call the server-side function 'adduser' and send one parameter (value of prompt)
+          console.log("CONECTADO");
+          // socket.emit('adduser', prompt("What's your name?"));
+        });
+
         $("#controlUp").on("mousedown", () =>
-          socket.emit("movimentUpArrowDownP1", "up")
+          socket.emit("movimentUpArrowDownP1", "movimentUpArrowDownP1")
         );
         $("#controlUp").on("mouseup", () =>
-          socket.emit("movimentDownArrowDownP1", "down")
+          socket.emit("movimentDownArrowDownP1", "movimentDownArrowDownP1")
         );
 
         $("#controlDown").on("mousedown", () =>
-          socket.emit("movimentUpArrowUpP1", "up")
+          socket.emit("movimentUpArrowUpP1", "movimentUpArrowUpP1")
         );
         $("#controlDown").on("mouseup", () =>
-          socket.emit("movimentDownArrowUpP1", "down")
+          socket.emit("movimentDownArrowUpP1", "movimentDownArrowUpP1")
         );
         $("#controlStart").on("click", () => socket.emit("start", "down"));
 
-        socket.on("returnMovimentUpArrowUpP1", (a) => {
+        socket.on("returnMovimentUpArrowUpP1", function () {
           document.getElementById("control").click();
         });
-        socket.on("returnMovimentDownArrowUpP1", (a) => {
+        socket.on("returnMovimentDownArrowUpP1", function () {
           document.getElementById("control2").click();
         });
-        socket.on("returnMovimentUpArrowDownP1", (a) => {
+        socket.on("returnMovimentUpArrowDownP1", function () {
           document.getElementById("control3").click();
         });
-        socket.on("returnMovimentDownArrowDownP1", (a) => {
+        socket.on("returnMovimentDownArrowDownP1", function () {
           document.getElementById("control4").click();
         });
-        socket.on("returnStart", (a) => {
+        socket.on("returnStart", function () {
           document.getElementById("control4").click();
         });
       } catch (err) {

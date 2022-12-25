@@ -119,8 +119,6 @@ Game = {
   })(),
 
   addEvent: function (obj, type, fn) {
-    console.log(obj);
-    console.log(type);
     obj.addEventListener(type, fn, false);
   },
   removeEvent: function (obj, type, fn) {
@@ -129,7 +127,6 @@ Game = {
 
   ready: function (fn) {
     if (Game.compatible()) Game.addEvent(document, "DOMContentLoaded", fn);
-    console.log(fn);
   },
 
   createCanvas: function () {
@@ -307,7 +304,6 @@ Game = {
       //   this.onkeydown.bind(this);
       // });
       Game.addEvent(document, "keypress", this.onkeydown.bind(this));
-      console.log("this", this);
       Game.addEvent(
         document.getElementById("control"),
         "click",
@@ -337,9 +333,6 @@ Game = {
     },
 
     onkeydown: function (ev, key) {
-      // alert(ev);
-      console.log("AQUI");
-      console.log(this.game.onkeydown);
       if (this.game.onkeydown) this.game.onkeydown(ev);
     },
     onkeyup: function (ev) {
