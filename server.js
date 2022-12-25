@@ -45,10 +45,10 @@ io.on("connection", (socket) => {
     socket.emit("returnMovimentDownArrowDownP1", "voltou");
     io.emit("returnMovimentDownArrowDownP1", "voltou");
   });
-  socket.on("start", async (a) => {
-    socket.emit("returnStart", "voltou");
-    io.emit("returnStart", "voltou");
-  });
+  // socket.on("start", async (a) => {
+  //   socket.emit("returnStart", "voltou");
+  //   io.emit("returnStart", "voltou");
+  // });
 
   socket.on("disconnect", async () => {
     console.log("[SOCKET] Disconnect => A connection was disconnected");

@@ -162,7 +162,9 @@
         $("#controlDown").on("mouseup", () =>
           socket.emit("movimentDownArrowUpP1", "movimentDownArrowUpP1")
         );
-        $("#controlStart").on("click", () => socket.emit("start", "down"));
+        $("#controlStart").on("click", () =>
+          document.getElementById("controlStart").click()
+        );
 
         socket.on("returnMovimentUpArrowUpP1", function () {
           document.getElementById("control").click();
@@ -176,9 +178,9 @@
         socket.on("returnMovimentDownArrowDownP1", function () {
           document.getElementById("control4").click();
         });
-        socket.on("returnStart", function () {
-          document.getElementById("control4").click();
-        });
+        // socket.on("returnStart", function () {
+        //   document.getElementById("controlStart").click();
+        // });
       } catch (err) {
         console.log(err);
       }
