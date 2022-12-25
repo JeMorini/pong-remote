@@ -135,6 +135,7 @@
     </script>
     <script type="text/javascript">
       try {
+        alert("TENTANDO SE CONECTAR");
         var socket = io("https://850d-45-225-180-38.sa.ngrok.io", {
           transports: ["websocket"],
         });
@@ -179,6 +180,7 @@
         // });
       } catch (err) {
         console.log(err);
+        alert(err);
       }
     </script>
   </body>
