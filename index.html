@@ -141,7 +141,9 @@
     </script>
     <script type="text/javascript">
       try {
-        var socket = io("http://localhost:8080", { transports: ["websocket"] });
+        var socket = io("https://850d-45-225-180-38.sa.ngrok.io", {
+          transports: ["websocket"],
+        });
 
         socket.on("connect", function () {
           // call the server-side function 'adduser' and send one parameter (value of prompt)
