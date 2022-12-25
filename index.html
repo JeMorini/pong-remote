@@ -150,17 +150,17 @@
           console.log("CONECTADO");
         });
 
-        $("#controlUp").on("mousedown", () =>
+        $("#controlUp").on("touchstart", () =>
           socket.emit("movimentUpArrowDownP1", "movimentUpArrowDownP1")
         );
-        $("#controlUp").on("mouseup", () =>
+        $("#controlUp").on("touchend", () =>
           socket.emit("movimentDownArrowDownP1", "movimentDownArrowDownP1")
         );
 
-        $("#controlDown").on("mousedown", () =>
+        $("#controlDown").on("touchstart", () =>
           socket.emit("movimentUpArrowUpP1", "movimentUpArrowUpP1")
         );
-        $("#controlDown").on("mouseup", () =>
+        $("#controlDown").on("touchend", () =>
           socket.emit("movimentDownArrowUpP1", "movimentDownArrowUpP1")
         );
         $("#controlStart").on("click", () =>
