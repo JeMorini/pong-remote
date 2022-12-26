@@ -124,9 +124,6 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
-  #sidebar {
-    display: block;
-  }
   #game {
     display: block;
     width: 640px;
