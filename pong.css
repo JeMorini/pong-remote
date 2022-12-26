@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(0, 14, 59);
   color: #aaa;
   font-size: 12pt;
   padding: 1em;
@@ -83,7 +83,7 @@ body {
 
 #containerButton {
   display: flex;
-  background-color: #000;
+  background-color: rgb(0, 14, 59);
   flex-direction: column;
   flex: 1;
   position: absolute;
@@ -105,7 +105,7 @@ body {
   }
   #containerButton {
     display: flex;
-    background-color: #000;
+    background-color: rgb(0, 14, 59);
     flex-direction: column;
     flex: 1;
     position: absolute;
@@ -125,6 +125,7 @@ body {
 
 @media screen and (min-width: 1000px) {
   #game {
+    background-color: rgb(0, 14, 59);
     display: block;
     width: 640px;
     height: 480px;
@@ -132,7 +133,7 @@ body {
   }
   #containerButton {
     display: none;
-    background-color: #000;
+    background-color: rgb(0, 14, 59);
     flex-direction: column;
     flex: 1;
     position: absolute;
@@ -158,8 +159,8 @@ body {
 }
 
 #controlUp {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -169,21 +170,21 @@ body {
 }
 
 #controlDown {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   background-color: #fff;
   border-radius: 50%;
   margin: 10px;
 }
 
 #arrow {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
 }
 
 #arrowDown {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   transform: rotate(180deg);
 }
 
