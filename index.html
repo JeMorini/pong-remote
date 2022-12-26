@@ -135,11 +135,11 @@
     </script>
     <script type="text/javascript">
       try {
-        var socket = io("https://9ff6-45-225-180-38.sa.ngrok.io", {
+        var socket = io("https://f366-45-225-180-38.sa.ngrok.io", {
           transports: ["websocket"],
         });
 
-        alert(socket.connected);
+        // alert(socket.connected);
 
         socket.on("connect", function () {
           // call the server-side function 'adduser' and send one parameter (value of prompt)
