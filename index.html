@@ -146,14 +146,14 @@
           console.log("CONECTADO");
         });
 
-        $("#controlUp").on("click", () =>
+        $("#controlUp").on("touchstart", () =>
           socket.emit("movimentUpArrowDownP1", "movimentUpArrowDownP1")
         );
         $("#controlUp").on("touchend", () =>
           socket.emit("movimentDownArrowDownP1", "movimentDownArrowDownP1")
         );
 
-        $("#controlDown").on("click", () =>
+        $("#controlDown").on("touchstart", () =>
           socket.emit("movimentUpArrowUpP1", "movimentUpArrowUpP1")
         );
         $("#controlDown").on("touchend", () =>
