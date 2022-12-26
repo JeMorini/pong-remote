@@ -180,12 +180,13 @@ body {
 #arrow {
   height: 150px;
   width: 150px;
+  transform: rotate(-90deg);
 }
 
 #arrowDown {
   height: 150px;
   width: 150px;
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 /* @media screen and (max-width: 800px) {
