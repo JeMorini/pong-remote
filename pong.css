@@ -160,6 +160,34 @@ body {
   }
 }
 
+#controlUp {
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#controlDown {
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#arrow {
+  height: 100px;
+  width: 100px;
+}
+
+#arrowDown {
+  height: 100px;
+  width: 100px;
+  transform: rotate(180deg);
+}
+
 /* @media screen and (max-width: 800px) {
   .containerButton {
     display: flex;
