@@ -303,7 +303,7 @@ Game = {
       // $("#control").on("click", () => {
       //   this.onkeydown.bind(this);
       // });
-      Game.addEvent(document, "keypress", this.onkeydown.bind(this));
+      Game.addEvent(document, "keydown", this.onkeydown.bind(this, 49));
       Game.addEvent(
         document.getElementById("control"),
         "click",
@@ -323,11 +323,6 @@ Game = {
         document.getElementById("control4"),
         "click",
         this.onkeyup.bind(this, 81)
-      );
-      Game.addEvent(
-        document.getElementById("controlStart"),
-        "click",
-        this.onkeydown.bind(this, 49)
       );
       // Game.addEvent(document, "keyup", this.onkeyup.bind(this));
     },
